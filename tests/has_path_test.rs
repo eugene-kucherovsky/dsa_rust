@@ -3,7 +3,6 @@ use std::collections::HashMap;
 
 #[test]
 fn has_path_test() {
-
     let mut adj_list = HashMap::new();
 
     adj_list.insert(
@@ -28,7 +27,6 @@ fn has_path_test() {
         vec!["Moscow".to_string(), "Tyumen".to_string()],
     );
     adj_list.insert("Tyumen".to_string(), vec!["Novosibirsk".to_string()]);
-
 
     let result_1 = has_path(&adj_list, String::from("Moscow"), String::from("Barnaul"));
 

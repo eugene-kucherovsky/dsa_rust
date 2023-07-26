@@ -1,7 +1,5 @@
-
 // Has Path ?
 // Difficulty Level : basic
-
 
 // Time complexity: O(n + e)
 // Space Complexity: O(n)
@@ -37,7 +35,6 @@ pub fn rec(graph: &HashMap<String, Vec<String>>, src: String, dst: String) -> bo
 
     if graph.contains_key(&src) {
         for neighbor in graph[&src].iter() {
-
             // dst.clone() - does not work without clone() !
             if rec(&graph, neighbor.to_string(), dst.clone()) == true {
                 return true;
